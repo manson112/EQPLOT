@@ -61,7 +61,7 @@ html
         setChart();
         var socket = io('http://54.180.100.103:3000');
         socket.on('eqsize', function(data){
-          $("#eqsizetext").text(data.eqsize);
+          $("#eqsize").text(data.eqsize);
           labelList.push(data.time);
           dataList.push(data.eqsize);
           if(data.eqsize < 3) {
