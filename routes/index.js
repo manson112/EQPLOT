@@ -28,8 +28,9 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/eqsize", function(req, res, next) {
+var eqsize = req.body.eqsize;
   //ee = "3.4~4.0"
-  var ee = req.body.eqsize;
+  /*var ee = req.body.eqsize;
   var eqsize;
   if(ee == "3.4~4.0") {
     eqsize = "3.7";
@@ -40,9 +41,9 @@ router.post("/eqsize", function(req, res, next) {
   } else if (ee == "6.1~7.0") {
 
   } else {
-    
+
   }
-  var eeList = ee.split("~"); // ["3.4", "4.0"]
+  var eeList = ee.split("~"); // ["3.4", "4.0"]*/
 
 
   const data = {
