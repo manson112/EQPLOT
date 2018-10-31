@@ -28,10 +28,28 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/eqsize", function(req, res, next) {
+  //ee = "3.4~4.0"
+  var ee = req.body.eqsize;
+  var eqsize;
+  if(ee == "3.4~4.0") {
+    eqsize = "3.7";
+  } else if (ee == "4.1~5.0") {
+
+  } else if (ee == "5.1~6.0") {
+
+  } else if (ee == "6.1~7.0") {
+
+  } else {
+    
+  }
+  var eeList = ee.split("~"); // ["3.4", "4.0"]
+
+
   const data = {
-    eqsize: req.body.eqsize,
+    eqsize: eqsize,
     time: format(new Date(), "hh:mm:ss")
   };
+
   socketApi.changeEQSize(data);
   res.send("");
 });

@@ -60,12 +60,8 @@ html
         }
         setChart();
         var socket = io('http://localhost:3000');
-
-        socket.on('connect', function() {
-          socket.emit("ddd", {data:"fdz"});
-        });
         socket.on('eqsize', function(data){
-          $("#eqsize").text(data.eqsize);
+          $("#eqsizetext").text(data.eqsize);
           labelList.push(data.time);
           dataList.push(data.eqsize);
           if(data.eqsize < 3) {
