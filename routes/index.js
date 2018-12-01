@@ -42,7 +42,7 @@ router.post("/eqsize", function(req, res, next) {
     eqsize = Math.random() * 4 + 6;
   } else {
   }
-  eqsize.toFixed(2);
+  parseFloat(eqsize).toFixed(2);
   console.log(eqsize);
 
   const data = {
