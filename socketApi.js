@@ -14,7 +14,6 @@ io.on("ddd", function(data) {
 });
 
 socketApi.changeEQSize = data => {
-  console.log(data);
   //emit : "eqsize"라는 이벤트를 발생시킨다.
   io.sockets.emit("eqsize", data);
 };
