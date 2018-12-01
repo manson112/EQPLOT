@@ -28,7 +28,7 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/eqsize", function(req, res, next) {
-var eqsize = req.body.eqsize;
+  var eqsize = req.body.eqsize;
   //ee = "3.4~4.0"
   /*var ee = req.body.eqsize;
   var eqsize;
@@ -44,7 +44,7 @@ var eqsize = req.body.eqsize;
 
   }
   var eeList = ee.split("~"); // ["3.4", "4.0"]*/
-
+  console.log(eqsize);
 
   const data = {
     eqsize: eqsize,
