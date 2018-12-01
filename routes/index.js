@@ -29,21 +29,19 @@ router.get("/", function(req, res, next) {
 
 router.post("/eqsize", function(req, res, next) {
   var eqsize = req.body.eqsize;
-  //ee = "3.4~4.0"
-  /*var ee = req.body.eqsize;
-  var eqsize;
-  if(ee == "3.4~4.0") {
-    eqsize = "3.7";
-  } else if (ee == "4.1~5.0") {
 
-  } else if (ee == "5.1~6.0") {
-
-  } else if (ee == "6.1~7.0") {
-
+  if (eqsize == "0~3.0") {
+    eqsize = Math.floor(Math.random() * 3);
+  } else if (eqsize == "3.0~3.3") {
+    eqsize = (Math.floor(Math.random() * 3) + 30) / 10.0;
+  } else if (eqsize == "3.4~3.9") {
+    eqsize = (Math.floor(Math.random() * 5) + 34) / 10.0;
+  } else if (eqsize == "4.0~6.0") {
+    eqsize = Math.floor(Math.random() * 2) + 4;
+  } else if (eqsize == "8.0") {
+    eqsize = Math.floor(Math.random() * 4) + 6;
   } else {
-
   }
-  var eeList = ee.split("~"); // ["3.4", "4.0"]*/
   console.log(eqsize);
 
   const data = {
