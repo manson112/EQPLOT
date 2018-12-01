@@ -31,17 +31,18 @@ router.post("/eqsize", function(req, res, next) {
   var eqsize = req.body.eqsize;
 
   if (eqsize == "0~3.0") {
-    eqsize = Math.floor(Math.random() * 3);
+    eqsize = Math.random() * 3;
   } else if (eqsize == "3.0~3.3") {
-    eqsize = (Math.floor(Math.random() * 3) + 30) / 10.0;
+    eqsize = (Math.random() * 3 + 30) / 10.0;
   } else if (eqsize == "3.4~3.9") {
-    eqsize = (Math.floor(Math.random() * 5) + 34) / 10.0;
+    eqsize = (Math.random() * 5 + 34) / 10.0;
   } else if (eqsize == "4.0~6.0") {
-    eqsize = Math.floor(Math.random() * 2) + 4;
+    eqsize = Math.random() * 2 + 4;
   } else if (eqsize == "8.0") {
-    eqsize = Math.floor(Math.random() * 4) + 6;
+    eqsize = Math.random() * 4 + 6;
   } else {
   }
+  eqsize.toFix(1);
   console.log(eqsize);
 
   const data = {
